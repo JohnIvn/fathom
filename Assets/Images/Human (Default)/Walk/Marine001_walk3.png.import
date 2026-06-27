@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvbfudqi45ogf"
-path="res://.godot/imported/human-Sheet.png-df5a3e2934608b260cdc3f3126b9a704.ctex"
+uid="uid://ixxyf8rrkw5n"
+path="res://.godot/imported/Marine001_walk3.png-bceea19e5c09e52d32e9b50bcc11e081.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Human/human-Sheet.png"
-dest_files=["res://.godot/imported/human-Sheet.png-df5a3e2934608b260cdc3f3126b9a704.ctex"]
+source_file="res://Assets/Images/Human (Default)/Walk/Marine001_walk3.png"
+dest_files=["res://.godot/imported/Marine001_walk3.png-bceea19e5c09e52d32e9b50bcc11e081.ctex"]
 
 [params]
 

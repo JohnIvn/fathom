@@ -2,17 +2,25 @@
 
 [ext_resource type="PackedScene" uid="uid://cs6lxkeu5ysag" path="res://Nodes/Interface/pause.tscn" id="1_fq0rs"]
 [ext_resource type="PackedScene" uid="uid://bq0twkgy0v40t" path="res://Nodes/Character/character.tscn" id="1_k3k2l"]
+[ext_resource type="Texture2D" uid="uid://h2uj5mtn607v" path="res://Assets/Images/Tiles/ex.png" id="3_yrc1x"]
 
 [node name="Debug" type="Node2D" unique_id=1063339198]
 
-[node name="Control" type="Control" parent="." unique_id=1130943977]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1587566385]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1130943977]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 
-[node name="Pause" parent="Control" unique_id=828297101 instance=ExtResource("1_fq0rs")]
+[node name="Pause" parent="CanvasLayer/Control" unique_id=828297101 instance=ExtResource("1_fq0rs")]
 layout_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=512355469]
+position = Vector2(967, 543)
+texture = ExtResource("3_yrc1x")
 
 [node name="Character" parent="." unique_id=777962636 instance=ExtResource("1_k3k2l")]
-position = Vector2(376, 242)
+position = Vector2(966, 529)

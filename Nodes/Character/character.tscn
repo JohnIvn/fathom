@@ -1,20 +1,134 @@
 [gd_scene format=3 uid="uid://bq0twkgy0v40t"]
 
+[ext_resource type="Texture2D" uid="uid://ddnxv4nt0tn38" path="res://Assets/Images/Human (Default)/Idle/Marine001_Idle1.png" id="1_35o3c"]
 [ext_resource type="Script" uid="uid://dt1ln8rn26dj4" path="res://Script/Character/character_body_2d.gd" id="1_ewtk2"]
-[ext_resource type="Texture2D" uid="uid://d00t0ark1jjln" path="res://icon.svg" id="2_l4ftv"]
+[ext_resource type="Texture2D" uid="uid://bq31h1ag27qnk" path="res://Assets/Images/Human (Default)/Idle/Marine001_Idle2.png" id="2_8qa3b"]
+[ext_resource type="Texture2D" uid="uid://3iubqwu30nqk" path="res://Assets/Images/Human (Default)/Run/Marine001_run1.png" id="3_w1yn8"]
+[ext_resource type="Texture2D" uid="uid://cmp8nqysrim7u" path="res://Assets/Images/Human (Default)/Run/Marine001_run2.png" id="4_2o1qr"]
+[ext_resource type="Texture2D" uid="uid://bu3w1xltddo72" path="res://Assets/Images/Human (Default)/Run/Marine001_run3.png" id="5_h3eo6"]
+[ext_resource type="Texture2D" uid="uid://c0ckew0kdnbsj" path="res://Assets/Images/Human (Default)/Run/Marine001_run4.png" id="6_e0hx7"]
+[ext_resource type="Texture2D" uid="uid://dt5t6xpmnybqw" path="res://Assets/Images/Human (Default)/Run/Marine001_run5.png" id="7_agppa"]
+[ext_resource type="Texture2D" uid="uid://bcsyaxap7isyy" path="res://Assets/Images/Human (Default)/Run/Marine001_run6.png" id="8_3ecyl"]
+[ext_resource type="Texture2D" uid="uid://dud6x80r0qvhp" path="res://Assets/Images/Human (Default)/Run/Marine001_run7.png" id="9_py4id"]
+[ext_resource type="Texture2D" uid="uid://da0nuficqphax" path="res://Assets/Images/Human (Default)/Run/Marine001_run8.png" id="10_70qtp"]
+[ext_resource type="Texture2D" uid="uid://dioidngp18rb6" path="res://Assets/Images/Human (Default)/Run/Marine001_run9.png" id="11_0fbaf"]
+[ext_resource type="Texture2D" uid="uid://c7neght344dts" path="res://Assets/Images/Human (Default)/Walk/Marine001_walk1.png" id="12_uhud0"]
+[ext_resource type="Texture2D" uid="uid://djhaj2128mxyl" path="res://Assets/Images/Human (Default)/Walk/Marine001_walk2.png" id="13_lwarv"]
+[ext_resource type="Texture2D" uid="uid://ixxyf8rrkw5n" path="res://Assets/Images/Human (Default)/Walk/Marine001_walk3.png" id="14_7u8p8"]
+[ext_resource type="Texture2D" uid="uid://djltd5ve6gfgr" path="res://Assets/Images/Human (Default)/Walk/Marine001_walk4.png" id="15_ax4d2"]
+[ext_resource type="Texture2D" uid="uid://ce2xnlxd6ltge" path="res://Assets/Images/Human (Default)/Walk/Marine001_walk5.png" id="16_7xqm5"]
+[ext_resource type="Texture2D" uid="uid://by1n3rqtmyb8q" path="res://Assets/Images/Human (Default)/Walk/Marine001_walk6.png" id="17_hphc2"]
+[ext_resource type="Texture2D" uid="uid://dy83xssksuco0" path="res://Assets/Images/Human (Default)/Walk/Marine001_walk7.png" id="18_d100m"]
+[ext_resource type="Texture2D" uid="uid://bqjuur6aikhqu" path="res://Assets/Images/Human (Default)/Walk/Marine001_walk8.png" id="19_8q1e8"]
+[ext_resource type="Script" uid="uid://cm7bycom4meqh" path="res://Script/Character/audio_stream_player_2d.gd" id="21_w1yn8"]
+[ext_resource type="AudioStream" uid="uid://b44xthee6j37u" path="res://Assets/Audio/Player/gunfire.mp3" id="22_agppa"]
+[ext_resource type="AudioStream" uid="uid://b7un7ffptbjc2" path="res://Assets/Audio/Player/footsteps.mp3" id="23_3ecyl"]
+[ext_resource type="AudioStream" uid="uid://b6o17qf43e2ad" path="res://Assets/Audio/Player/heavy_breathing.mp3" id="24_py4id"]
+[ext_resource type="AudioStream" uid="uid://b18onittjtxpc" path="res://Assets/Audio/Player/splat.mp3" id="25_70qtp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bhunq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_35o3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8qa3b")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_w1yn8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2o1qr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_h3eo6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_e0hx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_agppa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_3ecyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_py4id")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_70qtp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_0fbaf")
+}],
+"loop": 1,
+"name": &"run",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_uhud0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_lwarv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_7u8p8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ax4d2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_7xqm5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_hphc2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_d100m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_8q1e8")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bhunq"]
-size = Vector2(122, 20)
+size = Vector2(16.5, 6)
 
-[node name="Character" type="Node2D" unique_id=777962636]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=2147357191]
+[node name="Character" type="CharacterBody2D" unique_id=880050400]
 script = ExtResource("1_ewtk2")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1694424327]
-position = Vector2(582, 294)
-texture = ExtResource("2_l4ftv")
+[node name="PlayerCamera" type="Camera2D" parent="." unique_id=1146826741]
+zoom = Vector2(14.935, 14.935)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=2028299894]
-position = Vector2(582, 350)
+[node name="PlayerSprite" type="AnimatedSprite2D" parent="." unique_id=1678578372]
+sprite_frames = SubResource("SpriteFrames_bhunq")
+animation = &"idle"
+
+[node name="Body Collision" type="CollisionShape2D" parent="." unique_id=2028299894]
+position = Vector2(0, 15)
 shape = SubResource("RectangleShape2D_bhunq")
+
+[node name="AudioStreamer" type="Node2D" parent="." unique_id=1536631998]
+script = ExtResource("21_w1yn8")
+
+[node name="Gunshot" type="AudioStreamPlayer2D" parent="AudioStreamer" unique_id=1369750400]
+stream = ExtResource("22_agppa")
+
+[node name="Footsteps" type="AudioStreamPlayer2D" parent="AudioStreamer" unique_id=717019845]
+stream = ExtResource("23_3ecyl")
+
+[node name="StaminaOut" type="AudioStreamPlayer2D" parent="AudioStreamer" unique_id=1125994127]
+stream = ExtResource("24_py4id")
+
+[node name="Splatter" type="AudioStreamPlayer2D" parent="AudioStreamer" unique_id=1321285692]
+stream = ExtResource("25_70qtp")
