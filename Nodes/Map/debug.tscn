@@ -1,7 +1,18 @@
 [gd_scene format=3 uid="uid://ceybeu2jk3yoi"]
 
+[ext_resource type="PackedScene" uid="uid://cs6lxkeu5ysag" path="res://Nodes/Interface/pause.tscn" id="1_fq0rs"]
 [ext_resource type="PackedScene" uid="uid://bq0twkgy0v40t" path="res://Nodes/Character/character.tscn" id="1_k3k2l"]
 
 [node name="Debug" type="Node2D" unique_id=1063339198]
 
+[node name="Control" type="Control" parent="." unique_id=1130943977]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Pause" parent="Control" unique_id=828297101 instance=ExtResource("1_fq0rs")]
+layout_mode = 1
+
 [node name="Character" parent="." unique_id=777962636 instance=ExtResource("1_k3k2l")]
+position = Vector2(376, 242)

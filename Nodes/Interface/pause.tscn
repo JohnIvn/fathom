@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://cs6lxkeu5ysag"]
+
+[ext_resource type="Script" uid="uid://s0b0fbxv1hee" path="res://Script/Interface/pause.gd" id="1_udmbb"]
+
+[node name="Pause" type="Control" unique_id=828297101]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_udmbb")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1902102508]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -149.0
+offset_top = -69.0
+offset_right = 147.0
+offset_bottom = 74.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1178411254]
+layout_mode = 2
+
+[node name="Resume" type="Button" parent="MarginContainer/VBoxContainer" unique_id=25357256]
+layout_mode = 2
+text = "RESUME"
+
+[node name="Options" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1946108929]
+layout_mode = 2
+text = "OPTIONS"
+
+[node name="Main Menu" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1288610442]
+layout_mode = 2
+text = "MAIN MENU"
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer" unique_id=2040761684]
+layout_mode = 2
+text = "EXIT"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Main Menu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
