@@ -104,19 +104,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bhunq"]
 size = Vector2(16.5, 6)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_riqys"]
+size = Vector2(12, 11)
+
 [node name="Character" type="CharacterBody2D" unique_id=880050400]
 script = ExtResource("1_ewtk2")
-
-[node name="PlayerCamera" type="Camera2D" parent="." unique_id=1146826741]
-zoom = Vector2(14.935, 14.935)
-
-[node name="PlayerSprite" type="AnimatedSprite2D" parent="." unique_id=1678578372]
-sprite_frames = SubResource("SpriteFrames_bhunq")
-animation = &"idle"
-
-[node name="Body Collision" type="CollisionShape2D" parent="." unique_id=2028299894]
-position = Vector2(0, 15)
-shape = SubResource("RectangleShape2D_bhunq")
 
 [node name="AudioStreamer" type="Node2D" parent="." unique_id=1536631998]
 script = ExtResource("21_w1yn8")
@@ -132,3 +124,20 @@ stream = ExtResource("24_py4id")
 
 [node name="Splatter" type="AudioStreamPlayer2D" parent="AudioStreamer" unique_id=1321285692]
 stream = ExtResource("25_70qtp")
+
+[node name="PlayerCamera" type="Camera2D" parent="." unique_id=1146826741]
+zoom = Vector2(14.935, 14.935)
+
+[node name="PlayerSprite" type="AnimatedSprite2D" parent="." unique_id=1678578372]
+sprite_frames = SubResource("SpriteFrames_bhunq")
+animation = &"idle"
+
+[node name="BodyCollision" type="CollisionShape2D" parent="." unique_id=2028299894]
+position = Vector2(0, 15)
+shape = SubResource("RectangleShape2D_bhunq")
+
+[node name="PlayerAreaCollision" type="Area2D" parent="." unique_id=622077864]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerAreaCollision" unique_id=1246331785]
+position = Vector2(1, -0.5)
+shape = SubResource("RectangleShape2D_riqys")

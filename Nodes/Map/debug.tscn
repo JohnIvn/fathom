@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cs6lxkeu5ysag" path="res://Nodes/Interface/pause.tscn" id="1_fq0rs"]
 [ext_resource type="PackedScene" uid="uid://bq0twkgy0v40t" path="res://Nodes/Character/character.tscn" id="1_k3k2l"]
 [ext_resource type="Texture2D" uid="uid://h2uj5mtn607v" path="res://Assets/Images/Tiles/ex.png" id="3_yrc1x"]
+[ext_resource type="PackedScene" uid="uid://t3nsj6xtlcd8" path="res://Nodes/Objects/box.tscn" id="4_ptywi"]
 
 [node name="Debug" type="Node2D" unique_id=1063339198]
 
@@ -24,3 +25,6 @@ texture = ExtResource("3_yrc1x")
 
 [node name="Character" parent="." unique_id=777962636 instance=ExtResource("1_k3k2l")]
 position = Vector2(966, 529)
+
+[node name="Box" parent="." unique_id=1596046547 instance=ExtResource("4_ptywi")]
+position = Vector2(884, 535)
